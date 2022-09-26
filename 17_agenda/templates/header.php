@@ -25,12 +25,18 @@ if(isset($_SESSION['msg'])) {
             href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.1/css/bootstrap.min.css"
             integrity="sha512-siwe/oXMhSjGCwLn+scraPOWrJxHlUgMBMZXdPe2Tnk3I0x3ESCoLz7WZ5NTH6SZrywMY+PB1cjyqJ5jAluCOg=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+            integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
         <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
             integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- CSS -->
         <link rel="stylesheet" href="<?= $BASE_URL ?>css/styles.css">
+        <!-- JAVASCRIPT -->
+        <script src="js/custom.js"></script>
         <title>Agenda de contatos</title>
     </head>
 
@@ -48,4 +54,31 @@ if(isset($_SESSION['msg'])) {
                     </div>
                 </div>
             </nav>
+
+            <!-- Inicio Modal cadastrar usuario -->
+            <div class="modal fade" id="visUsuarioModal" tabindex="-1" aria-labelledby="visUsuarioModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="visUsuarioModalLabel">Contato</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <span id="msgAlertaErroVis"></span>
+                            <dl class="row">
+                                <dt class="col-sm-3">ID</dt>
+                                <dd class="col-sm-9"><span id="idUsuario"></span></dd>
+                                <dt class="col-sm-3">Nome</dt>
+                                <dd class="col-sm-9"><span id="nomeUsuario"></span></dd>
+                                <dt class="col-sm-3">Telefone</dt>
+                                <dd class="col-sm-9"><span id="telefoneUsuario"></span></dd>
+                                <dt class="col-sm-3">Observações</dt>
+                                <dd class="col-sm-9"><span id="obsUsuario"></span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim Modal cadastrar usuario -->
         </header>
