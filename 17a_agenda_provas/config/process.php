@@ -15,22 +15,22 @@ if(!empty($data)) {
     //criar contato
     if($data["type"] === "create"){
 
-        $name = $data["name"];
-        $phone = $data["phone"];
+        $disciplina = $data["disciplina"];
+        $date = $data["date"];
         $observations = $data["observations"];
 
-        $query = "INSERT INTO contacts (name, phone, observations) VALUES (:name, :phone, :observations)";
+        $query = "INSERT INTO provas (disciplina, date, observations) VALUES (:disciplina, :date, :observations)";
         
         $stmt = $conn->prepare($query);
 
-        $stmt->bindParam(":name", $name);
-        $stmt->bindParam(":phone", $phone);
+        $stmt->bindParam(":disciplina", $disciplina);
+        $stmt->bindParam(":date", $date);
         $stmt->bindParam(":observations", $observations);
 
         try {
 
             $stmt->execute();
-            $_SESSION["msg"] = "Contato criado com sucesso!";
+            $_SESSION["msg"] = "Prova agendada com sucesso!";
 
 
 } catch(PDOException $e){
@@ -39,25 +39,25 @@ if(!empty($data)) {
 }
     } else if($data["type"] === "edit") {
 
-        $name = $data["name"];
-        $phone = $data["phone"];
+        $disciplina = $data["disciplina"];
+        $date = $data["date"];
         $observations = $data["observations"];
         $id = $data["id"];
 
-        $query = "UPDATE contacts SET name = :name, phone = :phone, 
+        $query = "UPDATE provas SET date = :date, disciplina = :disciplina,
         observations = :observations WHERE id = :id";
 
         $stmt = $conn->prepare($query);
 
-        $stmt->bindParam(":name", $name);
-        $stmt->bindParam(":phone", $phone);
+        $stmt->bindParam(":date", $date);
+        $stmt->bindParam(":disciplina", $disciplina);
         $stmt->bindParam(":observations", $observations);
         $stmt->bindParam(":id", $id);
 
         try {
 
             $stmt->execute();
-            $_SESSION["msg"] = "Contato editado com sucesso!";
+            $_SESSION["msg"] = "Prova editada com sucesso!";
 
 
 } catch(PDOException $e){
@@ -68,7 +68,7 @@ if(!empty($data)) {
 
         $id = $data["id"];
 
-        $query = "DELETE FROM contacts WHERE id = :id";
+        $query = "DELETE FROM provas WHERE id = :id";
 
         $stmt = $conn->prepare($query);
 
@@ -78,7 +78,7 @@ if(!empty($data)) {
             try {
 
             $stmt->execute();
-            $_SESSION["msg"] = "Contato deletado com sucesso!";
+            $_SESSION["msg"] = "Prova deletada com sucesso!";
 
 
 } catch(PDOException $e){
@@ -104,8 +104,8 @@ if(!empty($_GET)) {
     // retorna um contato
 
 if(!empty($id)) {
-
-    $query = "SELECT * FROM contacts WHERE id = :id";
+    
+    $query = "SELECT * FROM provas WHERE id = :id";
 
     $stmt = $conn->prepare($query);
 
@@ -113,20 +113,20 @@ if(!empty($id)) {
 
     $stmt->execute();
 
-    $contact = $stmt->fetch();
+    $prova = $stmt->fetch();
 
 } else {
 
     // retorna todos contatos
-    $contacts = [];
+    $provas = [];
     
-    $query = "SELECT * FROM contacts";
+    $query = "SELECT * FROM provas";
     
     $stmt = $conn->prepare($query);
     
     $stmt->execute();
     
-    $contacts = $stmt->fetchAll();
+    $provas = $stmt->fetchAll();
 }
 
 }

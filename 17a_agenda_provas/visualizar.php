@@ -11,7 +11,7 @@ $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 if(!empty($id)) {
 
-   $query_usuario = "SELECT * FROM contacts WHERE id = :id LIMIT 1";
+   $query_usuario = "SELECT * FROM provas WHERE id = :id LIMIT 1";
 
    $stmt = $conn->prepare($query_usuario);
    $stmt->bindParam(':id', $id);

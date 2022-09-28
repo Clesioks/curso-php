@@ -4,11 +4,11 @@ include_once("templates/header.php");
 
 <div class="container" id="view-contact-container">
     <?php include_once("templates/backbtn.html"); ?>
-    <h1 id="main-title"><?= $contact["name"]; ?></h1>
-    <p class="bold">Telefone:</p>
-    <p><?= $contact["phone"]; ?></p>
+    <h1 id="main-title"><?= $prova["disciplina"]; ?></h1>
+    <p class="bold">Data:</p>
+    <p><?= $prova["date"]; ?></p>
     <p class="bold">Observações:</p>
-    <p><?= $contact["observations"]; ?></p>
+    <p><?= $prova["observations"]; ?></p>
 </div>
 
 

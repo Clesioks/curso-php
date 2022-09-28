@@ -1,7 +1,7 @@
 <?php
 
 $host = "localhost";
-$dbname = "agenda";
+$dbname = "agendamento";
 $user = "root";
 $pass = "";
 

@@ -14,9 +14,9 @@ async function visUsuario(id) {
   }
 
   document.getElementById('idUsuario').innerHTML = resposta['dados'].id;
-  document.getElementById('nomeUsuario').innerHTML = resposta['dados'].name;
-  document.getElementById('telefoneUsuario').innerHTML =
-    resposta['dados'].phone;
+  document.getElementById('nomeUsuario').innerHTML =
+    resposta['dados'].disciplina;
+  document.getElementById('telefoneUsuario').innerHTML = resposta['dados'].date;
   document.getElementById('obsUsuario').innerHTML =
     resposta['dados'].observations;
 }

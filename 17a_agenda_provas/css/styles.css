@@ -1,6 +1,6 @@
 .navbar-brand img {
-  width: 50px;
-  margin-left: 20px;
+  width: 75px;
+  margin-left: 30px;
 }
 
 #main-title {
@@ -17,11 +17,15 @@
 
 #contacts-table thead {
   color: #fff;
-  background-color: #007bff;
+  background-color: #1d1d1b;
 }
 
 #empty-list-text {
   text-align: center;
+}
+
+.cor-preta {
+  color: #000;
 }
 
 #msg {
@@ -96,6 +100,7 @@
 
 .btn-pa {
   margin-top: 10px;
+  margin-bottom: 80px;
 }
 
 /* CRIAR DADOS */
@@ -122,4 +127,20 @@
 
 .delete-form {
   display: inline-block;
+}
+
+/* FOOTER */
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #1d1d1b;
+  color: #fff;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+header {
+  background-color: #ffdd00;
 }

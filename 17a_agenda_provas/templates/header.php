@@ -37,20 +37,23 @@ if(isset($_SESSION['msg'])) {
         <link rel="stylesheet" href="<?= $BASE_URL ?>css/styles.css">
         <!-- JAVASCRIPT -->
         <script src="js/custom.js"></script>
-        <title>Agenda de contatos</title>
+        <title>Agenda de provas</title>
     </head>
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-dark ">
                 <a class="navbar-brand" href="<?= $BASE_URL ?>index.php">
                     <img src="<?= $BASE_URL ?>img/logo.svg" alt="Agenda">
                 </a>
                 <div>
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="<?= $BASE_URL ?>index.php" id="home-link">Agenda</a>
-                        <a class="nav-link active" href="<?= $BASE_URL ?>create.php" id="home-link2">Adicionar
-                            Contatos</a>
+                        <a class="nav-link active" href="<?= $BASE_URL ?>index.php" id="home-link">
+                            <div class="cor-preta">Agenda de Provas</div>
+                        </a>
+                        <a class="nav-link active" href="<?= $BASE_URL ?>create.php" id="home-link2">
+                            <div class="cor-preta">Adicionar Prova</div>
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -61,7 +64,7 @@ if(isset($_SESSION['msg'])) {
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="visUsuarioModalLabel">Contato</h5>
+                            <h5 class="modal-title" id="visUsuarioModalLabel">Prova</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -69,9 +72,9 @@ if(isset($_SESSION['msg'])) {
                             <dl class="row">
                                 <dt class="col-sm-3">ID</dt>
                                 <dd class="col-sm-9"><span id="idUsuario"></span></dd>
-                                <dt class="col-sm-3">Nome</dt>
+                                <dt class="col-sm-3">Disciplina</dt>
                                 <dd class="col-sm-9"><span id="nomeUsuario"></span></dd>
-                                <dt class="col-sm-3">Telefone</dt>
+                                <dt class="col-sm-3">Data:</dt>
                                 <dd class="col-sm-9"><span id="telefoneUsuario"></span></dd>
                                 <dt class="col-sm-3">Observações</dt>
                                 <dd class="col-sm-9"><span id="obsUsuario"></span></dd>
