@@ -11,18 +11,18 @@ include_once("templates/header.php");
     <table class="table" id="contacts-table">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Disciplina</th>
+                <!-- <th scope="col">#</th> -->
                 <th scope="col">Data</th>
+                <th scope="col">Disciplina</th>
                 <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach($provas as $prova): ?>
             <tr>
-                <td scope="row" class="col-id"><?= $prova["id"] ?></td>
-                <td scope="row"><?= $prova["disciplina"] ?></td>
+                <!-- <td scope="row" class="col-id"><?= $prova["id"] ?></td> -->
                 <td scope="row"><?= $prova["date"] = implode("/",array_reverse(explode("-",$prova["date"]))); ?></td>
+                <td scope="row"><?= $prova["disciplina"] ?></td>
                 <td>
                     <!-- <a href="<?= $BASE_URL ?>show.php?id=<?= $prova["id"] ?>"><i
                             class="fas fa-eye check-icon"></i></a> -->

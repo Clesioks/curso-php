@@ -13,10 +13,14 @@ async function visUsuario(id) {
     visModal.show();
   }
 
+  let dataProva = resposta['dados'].date;
+  data = new Date(dataProva);
+  dataFormatada = data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
+
   document.getElementById('idUsuario').innerHTML = resposta['dados'].id;
   document.getElementById('nomeUsuario').innerHTML =
     resposta['dados'].disciplina;
-  document.getElementById('telefoneUsuario').innerHTML = resposta['dados'].date;
+  document.getElementById('telefoneUsuario').innerHTML = dataFormatada;
   document.getElementById('obsUsuario').innerHTML =
     resposta['dados'].observations;
 }

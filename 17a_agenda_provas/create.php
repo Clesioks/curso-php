@@ -21,7 +21,7 @@ include_once("templates/header.php");
                 placeholder="Insira as observações" rows="3"></textarea>
         </div>
 
-        <div class="btn-pa">
+        <div class="btn-pa" id="rodape">
             <button type="submit" class="btn btn-primary ">Cadastrar</button>
         </div>
 

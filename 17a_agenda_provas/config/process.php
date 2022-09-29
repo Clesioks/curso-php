@@ -120,7 +120,7 @@ if(!empty($id)) {
     // retorna todos contatos
     $provas = [];
     
-    $query = "SELECT * FROM provas";
+    $query = "SELECT * FROM provas ORDER BY date ASC";
     
     $stmt = $conn->prepare($query);
     

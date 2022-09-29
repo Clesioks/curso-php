@@ -72,11 +72,11 @@ if(isset($_SESSION['msg'])) {
                             <dl class="row">
                                 <dt class="col-sm-3">ID</dt>
                                 <dd class="col-sm-9"><span id="idUsuario"></span></dd>
-                                <dt class="col-sm-3">Disciplina</dt>
+                                <dt class="col-sm-3">Disciplina:</dt>
                                 <dd class="col-sm-9"><span id="nomeUsuario"></span></dd>
                                 <dt class="col-sm-3">Data:</dt>
                                 <dd class="col-sm-9"><span id="telefoneUsuario"></span></dd>
-                                <dt class="col-sm-3">Observações</dt>
+                                <dt class="col-sm-3">Observações:</dt>
                                 <dd class="col-sm-9"><span id="obsUsuario"></span></dd>
                             </dl>
                         </div>
