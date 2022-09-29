@@ -138,13 +138,16 @@ footer {
   height: 100px;
   text-align: center;
   line-height: 100px;
-  flex-shrink: 0;
 }
 
 header {
   background-color: #ffdd00;
 }
 
-#rodape {
+/* #rodape {
   margin-bottom: 174px;
+} */
+
+.container {
+  min-height: calc(100vh - 101px - 100px);
 }

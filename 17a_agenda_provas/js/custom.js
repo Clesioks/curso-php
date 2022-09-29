@@ -17,7 +17,6 @@ async function visUsuario(id) {
   data = new Date(dataProva);
   dataFormatada = data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 
-  document.getElementById('idUsuario').innerHTML = resposta['dados'].id;
   document.getElementById('nomeUsuario').innerHTML =
     resposta['dados'].disciplina;
   document.getElementById('telefoneUsuario').innerHTML = dataFormatada;
