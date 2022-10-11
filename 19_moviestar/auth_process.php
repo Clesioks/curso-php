@@ -72,5 +72,22 @@ if($type === "register"){
 
 
 } else if ($type === "login"){
+
+    $email = filter_input(INPUT_POST, "email");
+    $password = filter_input(INPUT_POST, "password");
+
+    // tenta autenticar usuário
+
+    if($userDao->authenticateUser($email, $password)) {
+         $message->setMessage("Seja bem-vindo!", "success", "back");
+
+        // redirecina o usuário, caso não consegui autenticar
+    } else {
+
+            $message->setMessage("Usuário e/ou senha incorretos", "error", "back");
+    }    
     
+
+} else {
+     $message->setMessage("Informações inválidas", "error", "index.php");
 }
