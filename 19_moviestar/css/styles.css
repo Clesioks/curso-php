@@ -113,7 +113,11 @@
 
 #login-container .form-group,
 #register-container .form-group {
-  margin: 20px auto;
+  margin: 24px auto;
+}
+
+.alterar-container {
+  margin-top: 8px;
 }
 
 .btn-outline-warning {
@@ -137,6 +141,38 @@
   background-color: transparent;
   color: #f5c518;
   border-color: #f5c518;
+}
+
+/* Edit Profile */
+#profile-image-container {
+  width: 150px;
+  height: 150px;
+  border: 6px solid #f5c518;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+  margin: 15px auto;
+}
+
+.page-description {
+  color: #999;
+}
+
+#bio {
+  max-width: 400px;
+}
+
+.disabled {
+  background-color: #bbb;
+}
+
+#change-password-container {
+  margin-top: 30px;
+}
+
+.edit-profile-page .btn-nosso {
+  width: auto;
+  margin-top: 16px;
 }
 
 /* FOOTER */

@@ -18,7 +18,7 @@ if($userData->image == "") {
 
 
 ?>
-<div id="main-container" class="container-fluid">
+<div id="main-container" class="container-fluid edit-profile-page">
     <div class="col-md-12">
         <form action="<?= $BASE_URL ?>user_process.php" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="type" value="update">
@@ -27,33 +27,33 @@ if($userData->image == "") {
                     <h1><?= $fullName ?></h1>
                     <p class="page-description">Altere seus dados no formulário abaixo:</p>
                     <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite o seu nome"
-                            value="<?= $userData->name ?>">
+                        <label for="name" class="alterar-container">Nome:</label>
+                        <input type="text" class="form-control alterar-container" id="name" name="name"
+                            placeholder="Digite o seu nome" value="<?= $userData->name ?>">
                     </div>
                     <div class="form-group">
-                        <label for="lastname">Sobrenome:</label>
-                        <input type="text" class="form-control" id="lastname" name="lastname"
+                        <label for="lastname" class="alterar-container">Sobrenome:</label>
+                        <input type="text" class="form-control alterar-container" id="lastname" name="lastname"
                             placeholder="Digite o seu nome" value="<?= $userData->lastname ?>">
                     </div>
                     <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="text" readonly class="form-control disabled" id="email" name="email"
-                            placeholder="Digite o seu nome" value="<?= $userData->email ?>">
+                        <label for="email" class="alterar-container">E-mail:</label>
+                        <input type="text" readonly class="form-control disabled alterar-container" id="email"
+                            name="email" placeholder="Digite o seu nome" value="<?= $userData->email ?>">
                     </div>
-                    <input type="submit" class="btn form-btn" value="Alterar">
+                    <input type="submit" class="btn-nosso" value="Alterar">
                 </div>
                 <div class="col-md-4">
                     <div id="profile-image-container"
                         style="background-image: url('<?= $BASE_URL ?>img/users/<?= $userData->image ?>')">
                     </div>
                     <div class="form-group">
-                        <label for="image">Foto:</label>
+                        <label for="image" class="alterar-container">Foto:</label>
                         <input type="file" class="form-control-file" name="image">
                     </div>
                     <div class="form-group">
-                        <label for="bio">Sobre você:</label>
-                        <textarea class="form-control" name="bio" id="bio" rows="5"
+                        <label for="bio" class="alterar-container">Sobre você:</label>
+                        <textarea class="form-control alterar-container" name="bio" id="bio" rows="5"
                             placeholder="Conte quem você é, o que faz e onde trabalha..."><?= $userData->bio ?></textarea>
 
                     </div>
@@ -63,6 +63,28 @@ if($userData->image == "") {
             </div>
     </div>
     </form>
+    <div class="row" id="change-password-container">
+        <div class="col-md-4">
+            <h2>Alterar a senha:</h2>
+            <p class="page-description">Digite a nova senha e confirme, para alterar sua senha:</p>
+            <form action="<?= $BASE_URL ?>user_process.php" method="POST">
+                <input type="hidden" name="type" value="changepassword">
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" class="form-control alterar-container" id="password" name="password"
+                        placeholder="Digite o sua nova senha">
+                </div>
+                <div class="form-group">
+                    <label for="confirmpassword">Confirmação de senha:</label>
+                    <input type="password" class="form-control alterar-container" id="confirmpassword"
+                        name="confirmpassword" placeholder="Digite o sua nova senha">
+                </div>
+                <input type="submit" class="btn-nosso" value="Alterar senha">
+            </form>
+        </div>
+
+    </div>
+
 
 
 </div>
