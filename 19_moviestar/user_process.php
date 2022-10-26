@@ -20,7 +20,24 @@ if($type === "update") {
     // resgata dados do usuário
 $userData = $userDao->verifyToken();
 
-print_r($userData);
+// receber dados do post
+$name = filter_input(INPUT_POST, "name");
+$lastname = filter_input(INPUT_POST, "lastname");
+$email = filter_input(INPUT_POST, "email");
+$bio = filter_input(INPUT_POST, "bio");
+
+// criar um novo objeto do usuário
+$user = new User();
+
+// preencher os dados do usuário
+$userData->name = $name;
+$userData->lasname = $lasname;
+$userData->email = $email;
+$userData->bio = $bio;
+
+$userDao->update($userData);
+
+
 
     // atualizar senha do usuário
 } else if ($type === "changepassword") {
