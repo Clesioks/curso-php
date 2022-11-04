@@ -69,12 +69,13 @@ if($userData->image == "") {
             <p class="page-description">Digite a nova senha e confirme, para alterar sua senha:</p>
             <form action="<?= $BASE_URL ?>user_process.php" method="POST">
                 <input type="hidden" name="type" value="changepassword">
-                <div class="form-group">
+                <input type="hidden" name="id" value="<?= $userData->id ?>">
+                <div class="form-group alterar-container">
                     <label for="password">Senha:</label>
                     <input type="password" class="form-control alterar-container" id="password" name="password"
                         placeholder="Digite o sua nova senha">
                 </div>
-                <div class="form-group">
+                <div class="form-group alterar-container">
                     <label for="confirmpassword">Confirmação de senha:</label>
                     <input type="password" class="form-control alterar-container" id="confirmpassword"
                         name="confirmpassword" placeholder="Digite o sua nova senha">
