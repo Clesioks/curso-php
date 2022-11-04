@@ -12,7 +12,7 @@ $userData = $userDao->verifyToken(true);
 
 ?>
 
-<div id="main-container" class="contaner-fluid ">
+<div id="main-container" class="container-fluid ">
     <div class="offset-md-4 col-md-4 new-movie-container">
         <h1 class="page-title alterar-container">Adicionar Filme</h1>
         <p class="page-description">Adicione sua crítica e compartilhe com o mundo</p>
@@ -26,7 +26,7 @@ $userData = $userDao->verifyToken(true);
 
             </div>
             <div class="form-group alterar-container">
-                <label for="image" class="alterar-container">Imagem:</label>
+                <label for="image" class="alterar-container">Imagem:</label><br>
                 <input type="file" class="form-control-file" name="image" id="image">
             </div>
             <div class="form-group alterar-container">
