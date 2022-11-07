@@ -11,6 +11,7 @@ require_once("dao/MovieDAO.php");
 
 $message = new Message($BASE_URL);
 $userDao = new UserDAO($conn, $BASE_URL);
+$movieDao = new MovieDAO($conn, $BASE_URL);
 
 // resgata o tipo
 
@@ -38,6 +39,7 @@ if($type === "create") {
         $movie->trailer = $trailer;
         $movie->category = $category;
         $movie->length = $length;
+        $movie->users_id = $userData->id;
 
         // upload de imagem
 
@@ -61,7 +63,7 @@ if($type === "create") {
                 // gerando o nome da imagem
                 $imageName = $movie->imageGenerateName();
 
-                imagejpeg($imageFile, "./img/movies" . $imageName, 100);
+                imagejpeg($imageFile, "./img/movies/" . $imageName, 100);
 
                 $movie->image = $imageName;
 
